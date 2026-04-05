@@ -1,0 +1,53 @@
+# ==============================================================================
+# .gitignore – Projeto Adesão PGS
+# Dados não são versionados (tamanho e confidencialidade).
+# Scripts, outputs e documentação SÃO versionados.
+# ==============================================================================
+
+# ── Dados brutos e processados (manter localmente) ───────────────────────────
+data/raw/
+data/processed/
+data/external/
+
+# ── Formatos de dados (qualquer subpasta) ─────────────────────────────────────
+*.dta
+*.dta~
+*.csv
+
+# ── Logs do Stata ─────────────────────────────────────────────────────────────
+*.log
+*.smcl
+*.stswp
+
+# ── Arquivos temporários do Stata ─────────────────────────────────────────────
+*.ster
+~*.dta
+
+# ── LaTeX auxiliares (gerados na compilação) ──────────────────────────────────
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# ── Sistema operacional ───────────────────────────────────────────────────────
+# Windows
+Thumbs.db
+desktop.ini
+# macOS
+.DS_Store
+# ==============================================================================
+# O QUE É VERSIONADO (não ignorado):
+#   scripts/*.do    → código de análise
+#   config.do       → configuração de caminhos
+#   run_all.do      → script mestre
+#   output/tables/  → tabelas .tex (resultados)
+#   output/figures/ → figuras .png/.pdf
+#   paper/          → manuscrito LaTeX
+#   README.md       → documentação
+# ==============================================================================
